@@ -9,6 +9,41 @@
 
 function isAnagram(str1, str2) {
 
+  if( str1.length !== str2.length ){
+    return console.log("Not Anagram");
+  }
+
+   str1 = str1.toLowerCase();
+   str2 = str2.toLowerCase();
+
+  for (let i = 0; i < str1.length ; i++) {
+    
+   let char = str1.charAt(i);
+   let isPresent = false;
+   
+   for (let j = 0; j < str2.length ; j++) {
+    
+    let charTwo = str2.charAt(j);
+    
+    if( charTwo === char ){
+      isPresent = true;
+    } else{
+      continue
+    } 
+    
+    if(isPresent !== true ){
+      return console.log("Not anagram");
+    }
+
+   }
+
+    
+  }
+
+  return console.log("Anagram");
+
 }
 
-module.exports = isAnagram;
+isAnagram('look','kolo');
+
+// module.exports = isAnagram;
