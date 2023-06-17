@@ -44,6 +44,4 @@ function isAnagram(str1, str2) {
 
 }
 
-isAnagram('look','kolo');
-
-// module.exports = isAnagram;
+module.exports = isAnagram;
