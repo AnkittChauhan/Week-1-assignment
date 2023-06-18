@@ -7,7 +7,22 @@
 */
 
 function isPalindrome(str) {
+  str = str.toLowerCase()
+
+  const length = str.length;
+  const middle = Math.floor(length / 2);
+
+  for (let i = 0; i < middle; i++) {
+    if (str[i] !== str[length - 1 - i]) {
+      return false;
+    }
+  }
+
   return true;
 }
 
-module.exports = isPalindrome;
+
+const ans = isPalindrome("Ankit")
+console.log(ans);
+
+// module.exports = isPalindrome;
